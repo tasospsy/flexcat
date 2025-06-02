@@ -1,0 +1,26 @@
+{
+    "id": "E78FEB0B",
+    "path": "~/Google Drive/_phd/Rpackage/flexcat/R/estimateLcm.R",
+    "project_path": "R/estimateLcm.R",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1748874805208.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "11,2",
+        "scrollLine": "5"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1748879364,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1748879364036,
+    "read_only": false,
+    "read_only_alternatives": []
+}
