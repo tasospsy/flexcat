@@ -12,3 +12,8 @@ install.packages("remotes")
 
 # Install flexcat from GitHub
 remotes::install_github("tasospsy/flexcat")
+```
+```r
+# Load the package
+library(flexcat)
+```
