@@ -6,7 +6,7 @@
 #' @param pat A vector for the item response categories
 #'
 #' @return A matrix of all possible response patterns (each row is one pattern)
-#' @export
+#' @keywords internal
 all.patterns <- function(J, pat){
   grid <- list()
   j <- 0;

@@ -17,3 +17,4 @@ A matrix of all possible response patterns (each row is one pattern)
 \description{
 This function generates all possible response patterns for `J` items with `levels`.
 }
+\keyword{internal}
