@@ -7,7 +7,7 @@
 #'
 #' @return A matrix of all possible response patterns (each row is one pattern)
 #' @keywords internal
-all.patterns <- function(J, pat){
+all_patterns <- function(J, pat){
   grid <- list()
   j <- 0;
   p <- length(pat)^J
