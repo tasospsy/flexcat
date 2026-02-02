@@ -57,7 +57,7 @@ calibrateLSCAT <- function(X, ic = "aic", method = "all", saveLCMparams = FALSE)
   # RP is an nR x 1 vector of the probability that a response patterns occurs under the latent class model
   # Note: R is based on X1, the dataset used for poLCA
   X1 <- X - min(X) + 1L
-  if (method == "all") R <- t(all.patterns(J, 1 : nCat))
+  if (method == "all") R <- t(all_patterns(J, 1 : nCat))
 
   if (method == "emp") {
     Rchar <- matrix(sort(unique(apply(X1, 1, paste0, collapse = ""))))
@@ -78,18 +78,7 @@ calibrateLSCAT <- function(X, ic = "aic", method = "all", saveLCMparams = FALSE)
 
   # -------------------------------------------------------------------------
   # Compute π
-  nR <- nrow(R)
-  RP <- rep(NA, nR)
-  for (p in 1 : nR){
-    RP[p] <- 0
-    for (k in 1 : bestK){
-      RP.k <- log(W[k])
-      for(j in 1 : J) RP.k <- RP.k + log(P[[j]][k, R[p, j]])
-      #cat(P[[j]][k, R[p, j]])
-      RP[p] <- RP[p] + exp(RP.k)
-    }
-  }
-  RP <- RP/sum(RP) # normalize π
+  RP <- compute_p(R = R, bestK=bestK, W = W, P = P, J=J)
   # return the data to original format
   if(min(X1)-min(X)==1) R <- R - 1L
 
